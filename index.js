@@ -72,7 +72,7 @@ function displayError(error) {
 
 //https://api.github.com/repos/owner/repo/commits/
 
-function showCommits() {
+function showCommits(el) {
   //const el = { dataset: { repository: "repo", owner: "owner" } }
   debugger
   //'https://api.github.com/search/repositories?q=${input}'
