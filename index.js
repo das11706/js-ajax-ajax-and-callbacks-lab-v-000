@@ -73,10 +73,10 @@ function displayError(error) {
 //https://api.github.com/repos/owner/repo/commits/
 
 function showCommits(el) {
-  const el = { dataset: { repo: "repo", owner: "owner" } }
+  //const el = { dataset: { repository: "repo", owner: "owner" } }
   debugger
   //'https://api.github.com/search/repositories?q=${input}'
-  $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repo}/commits`, function(response){
+  $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, function(response){
     //console.log(response);
     const commitsList = `<ul>${response.map(com => '<li>' + com.sha + com.commit.author.name + com.commit.author.login + com.commit.author.avatar + '</li>').join('')}</ul>`;
     document.getElementById('details').innerHTML = commitsList;
