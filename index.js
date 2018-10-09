@@ -73,7 +73,7 @@ function displayError(error) {
 //https://api.github.com/repos/owner/repo/commits/
 
 function showCommits(el) {
-  //const el = { dataset: { repository: "repo", owner: "owner" } }
+  const el = { dataset: { repo: "repo", owner: "owner" } }
   debugger
   //'https://api.github.com/search/repositories?q=${input}'
   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repo}/commits`, function(response){
